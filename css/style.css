@@ -1,0 +1,426 @@
+@charset "utf-8";
+@font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }   
+#wrap{
+    font-family: 'GmarketSansMedium';
+    /* overflow: hidden; */
+}
+
+/* header */
+header{
+    position: fixed;
+    width: 100%;
+    margin-top: -100px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+header>.container{
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+header>.container>h1.logo{
+    position: absolute;
+    left: 30px;
+    width: 150px;
+    height: 80px;
+    margin-top: 10px;
+    background-image: url(./../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+header>.container>h1.logo>a{
+    display: block;
+    height: 100px;
+    text-indent: -9999px;
+}
+header>.container>nav{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+}
+header>.container>nav>.gnb{
+    display: flex;
+}
+header>.container>nav>.gnb>li>a{
+    display: block;
+    height: 30px;
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 30px;
+}
+header>.container>nav>.gnb>li.on>a{
+    color: rgb(120, 166, 216);
+    font-weight: 800;
+}
+
+
+/* section */
+/* 슬라이드 */
+section>.slides{
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 400px;
+    margin: 100px auto 0;
+    text-indent: -9999px;
+}
+section>.slides>.slide-container{
+    position: absolute;
+    display: flex;
+    margin: 50px auto;
+}
+@keyframes fade {
+    0%  {opacity: 0.4;}
+    30% {opacity: 0.6;}
+    60% {opacity: 0.9;}
+    90% {opacity: 0.95;}
+    100%{opacity: 1;}
+}
+section>.slides>.slide-container>li{
+    animation: fade 1s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1000px;
+    height: 300px;
+    text-indent: -9999px;
+}
+section>.slides>.slide-container>li:nth-child(1){display:block; background-image: url(./../images/slide1.jpg);}
+section>.slides>.slide-container>li:nth-child(2){background-image: url(./../images/slide2.jpg);}
+section>.slides>.slide-container>li:nth-child(3){background-image: url(./../images/slide3.jpg);}
+section>.slides>.slide-container>li:nth-child(4){background-image: url(./../images/slide4.jpg);}
+section>.slides>.slide-container>li:nth-child(5){background-image: url(./../images/slide5.jpg);}
+section>.slides>.slide-container>li:nth-child(6){background-image: url(./../images/slide6.jpg);}
+section>.slides>.slide-container>li:nth-child(7){background-image: url(./../images/slide7.jpg);}
+section>.slides>.slide-container>li:nth-child(8){background-image: url(./../images/slide8.jpg);}
+section>.slides>.slide-container>li:nth-child(9){background-image: url(./../images/slide9.jpg);}
+section>.slides>.slide-container>li:nth-child(10){background-image: url(./../images/slide10.jpg);}
+
+section>.slides>.slide-navigation{
+    display: block;
+    position: absolute;
+    text-indent: -9999px;
+}
+section>.slides>.slide-navigation.prev{
+    top: 45%;
+    background-image: url(./../images/prev.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+section>.slides>.slide-navigation.next{
+    top: 45%;
+    left: 950px;
+    background-image: url(./../images/next.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+section>.slides>.slide-container>li>a{
+    display: block;
+    height: 300px;
+}
+section>.slides>.slides-pagination{
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    left: 38%;
+    top: -10px;
+}
+section>.slides>.slides-pagination>li{
+    display: inline-block;    
+    margin-right: 10px;
+    background-image: url(./../images/dot.png);
+    margin-top: 380px;
+}
+section>.slides>.slides-pagination>li>a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    text-indent: -9999px;
+}
+section>.slides>.slides-pagination>li:hover,
+section>.slides>.slides-pagination>li.on{
+    background-image: url(./../images/dot_hover.png);
+}
+
+
+
+/* 콘텐츠 */
+section>article{
+    margin: 0 auto;
+}
+
+/* 축제/체험 */
+section>article.cont1{
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    margin: 100px auto 0;
+    background-image: url(./../images/mascot.jpg);
+    background-size: 400px;
+    background-position: 1420px 70px;
+    background-repeat: no-repeat;
+}
+section>article.cont1>ul{
+    display: flex; 
+    margin: 0 auto;
+    width: 1000px;
+}
+section>article.cont1>ul>li{
+    width: 250px;
+    height: 400px;
+    background-color: #eee;
+    border-radius: 20px;
+    margin-right: 30px;
+}
+section>article.cont1>ul>li:last-child{
+    margin-right: 0;
+}
+section>article.cont1>ul>li>a>img{
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+section>article.cont1>ul>li>a>span{
+    width: 180px;
+    height: 70px;
+    line-height: 70px;
+    color: rgb(120, 166, 216);
+    display: block;
+    font-size: 30px;
+    margin: 20px auto 0;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+section>article.cont1>ul>li>a>p{
+    margin-top: 20px;
+    font-size: 18px;    
+    color: #999;
+    line-height: 1.2;
+}
+
+
+/* 역사/문화 */
+section>article.cont2{
+    height: 500px;
+    width: 1000px;
+    text-align: center;
+    margin-top: 50px;
+}
+section>article.cont2>p:nth-child(1){
+    width: 50px;
+    height: 421px;
+    line-height: 1.5;
+    border-right: 0;
+    font-size: 40px;
+    background-color: #eee;
+}
+section>article.cont2>ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+section>article.cont2>p{
+    padding: 20px;
+    float: left;
+    border: 1px solid #ccc;
+}
+section>article.cont2>p>a>img{
+    width: 300px;
+    height: 400px;
+}
+section>article.cont2>ul>li:nth-child(1),
+section>article.cont2>ul>li:nth-child(2){
+    border-top: 1px solid #ccc;
+}
+section>article.cont2>ul>li{
+    text-align: center;
+    width: 275px;
+    height: 230px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+section>article.cont2>ul>li>a>img{
+    margin-top: 20px;
+    width: 200px;
+    height: 180px;
+}
+
+
+
+/* 관광명소 */
+section>article.cont3{
+    width: 1060px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+section>article.cont3>div{
+    position: relative;
+}
+section>article.cont3>div>p{
+    margin: 70px auto 0;
+    font-size: 30px;
+    text-align: center;    
+}
+section>article.cont3>div>.tour-container{
+    position: absolute;
+    display: flex;
+    width: calc(270px*10);
+    margin: 50px auto;
+    flex-flow: row nowrap;
+    top: 30px;
+}
+section>article.cont3>div>.tour-container>p{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-size: cover; 
+    margin-right: 20px;
+}
+section>article.cont3>div>.tour-container>p:nth-child(1){display: block; background-image: url(./../images/slide1.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(2){background-image: url(./../images/slide2.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(3){background-image: url(./../images/slide3.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(4){background-image: url(./../images/slide4.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(5){background-image: url(./../images/slide5.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(6){background-image: url(./../images/slide6.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(7){background-image: url(./../images/slide7.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(8){background-image: url(./../images/slide8.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(9){background-image: url(./../images/slide9.jpg);}
+section>article.cont3>div>.tour-container>p:nth-child(10){background-image: url(./../images/slide10.jpg);}
+section>article.cont3>div>.tour-container>p>a>span{
+    position: absolute;
+    top: 270px;
+    text-align: center;
+    margin-left: 100px;
+}
+section>article.cont3>div>.tour-container>p>a{
+    display: block;
+}
+section>article.cont3>div>button{
+    display: inline;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+section>article.cont3>div>.prev{    
+    top: -10px;
+    left: 390px;
+}
+section>article.cont3>div>.next{
+    top: -10px;
+    left: 640px;
+}
+
+
+/* 여행정보 */
+section>article.cont4{
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+}
+section>article.cont4>ul>li{
+    width: 1000px;
+    height: 250px;
+    margin-bottom: 20px;
+    background-color: rgba(120, 166, 216, 0.7);
+    background-image: url(./../images/intro_logo.png);
+    background-repeat: no-repeat;
+    background-position: 880px 170px;
+    background-size: 100px;
+}
+section>article.cont4>ul>li>a{
+    position: relative;
+}
+section>article.cont4>ul>li>a>p{
+    padding: 30px;
+    font-size: 20px;
+}
+section>article.cont4>ul>li:nth-child(1)>a>img{
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    width: 200px;
+    height: 200px;    
+}
+section>article.cont4>ul>li:nth-child(1)>a>span{
+    position: absolute;
+    top: 60px;
+    left: 340px;
+    width: 500px;
+    height: 400px;
+}
+section>article.cont4>ul>li:nth-child(2)>a>img{
+    position: absolute;
+}
+section>article.cont4>ul>li:nth-child(2)>a>img:first-child{
+    top: 25px;
+    left: 100px;
+}
+section>article.cont4>ul>li:nth-child(2)>a>img:nth-of-type(2){
+    top: 25px;
+    left: 350px;
+}
+section>article.cont4>ul>li:nth-child(2)>a>img:nth-of-type(3){
+    top: 25px;
+    left: 600px;
+}
+section>article.cont4>ul>li:nth-child(3)>a>img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+section>article.cont4>ul>li:nth-child(3)>a>img:first-child{
+    top: 25px;
+    left: 100px;
+}
+section>article.cont4>ul>li:nth-child(3)>a>span{
+    position: absolute;
+    top: 60px;
+    left: 340px;
+    width: 500px;
+    height: 400px;
+}
+
+
+/* footer */
+footer>address{
+    margin-top: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #eee;
+}
+
+
+/* aside */
+aside{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+aside>a.top{
+    display: block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #ccc;
+}
+aside>a.top:hover{
+    background-color: #ccc;
+}
+aside>a.top>i{color: #fff;}
+
+
+
